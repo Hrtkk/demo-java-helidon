@@ -6,7 +6,7 @@ pipeline {
     }
 
     parameters {
-        string(NAME: 'Greeting', defaultValue: 'Hello', DESCRIPTION: 'How should I greet the World?')
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the World?')
     }
 
     stages {
@@ -30,13 +30,13 @@ pipeline {
         }
 
         stage ('Test') {
-            step {
+            steps {
                 echo 'Testing...'
             }
         }
 
         stage ('Deploy') {
-            step {
+            steps {
                 echo 'Deploying...'
             }
         }
